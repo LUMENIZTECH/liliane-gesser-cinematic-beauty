@@ -693,7 +693,7 @@ function Footer() {
         <div>
           © {new Date().getFullYear()} {brand.name} — Todos os direitos reservados
         </div>
-        <div>Atelier de Beleza · SC</div>
+        <div>LILIANE GESSER · SC</div>
       </div>
     </footer>
   );
