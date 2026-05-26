@@ -5,18 +5,20 @@
 // ============================================================
 
 import heroImg from "@/assets/hero.jpg";
-import aboutImg from "@/assets/about.jpg";
-import p1 from "@/assets/p1.jpg";
+import aboutImg from "@/assets/mae 2.jpeg";
+import logoSymbol from "@/assets/logo-simbolo.png";
+import p1 from "@/assets/noiva .jpeg";
 import p2 from "@/assets/p2.jpg";
-import p3 from "@/assets/p3.jpg";
-import p4 from "@/assets/p4.jpg";
+import p3 from "@/assets/penteado 3.jpeg";
+import p4 from "@/assets/curso.jpeg";
 import p5 from "@/assets/p5.jpg";
 import p6 from "@/assets/p6.jpg";
 
 // -------- MARCA --------
 export const brand = {
   name: "Liliane Gesser",
-  initials: "LG",
+  logo: logoSymbol,
+  initials: "Liliane Gesser",
   tagline: "Maquiando e realizando sonhos.",
   heroSubtitle: "A maquiagem que eterniza\nmomentos únicos.",
   location: "Da Serra ao Litoral de Santa Catarina",
@@ -36,7 +38,7 @@ export const contact = {
 // -------- MÍDIA --------
 // Substitua este vídeo pelo vídeo oficial da cliente em /public/videos/hero.mp4
 export const media = {
-  heroVideo: "/videos/hero.mp4",
+  heroVideo: "/videos/video hero.mp4",
   heroPoster: heroImg, // fallback enquanto o vídeo carrega
   aboutImage: aboutImg,
 };
@@ -45,7 +47,7 @@ export const media = {
 export const stats = [
   { n: "+5.000", l: "Atendimentos" },
   { n: "+1.000", l: "Alunas Formadas" },
-  { n: "16", l: "Anos de Trajetória" },
+  { n: "16", l: "Anos de Experiência" },
 ];
 
 // Frases do marquee superior
@@ -69,37 +71,87 @@ export const about = {
 
 // -------- SERVIÇOS --------
 export const services = [
-  { n: "01", t: "Noivas", d: "Make exclusiva para o seu grande dia, do trial ao último retoque.", img: p1 },
-  { n: "02", t: "Maquiagem Social", d: "Festas, formaturas e eventos especiais com acabamento impecável.", img: p2 },
-  { n: "03", t: "Penteados", d: "Penteados sob medida que dialogam com sua make e seu estilo.", img: p3 },
-  { n: "04", t: "Cursos Profissionais", d: "Formação completa para futuras maquiadoras profissionais.", img: p4 },
-  { n: "05", t: "Beauty Makeup", d: "Make beauty para ensaios fotográficos e produções editoriais.", img: p5 },
+  {
+    n: "01",
+    t: "Noivas",
+    d: "Make exclusiva para o seu grande dia, do trial ao último retoque.",
+    img: p1,
+  },
+  {
+    n: "02",
+    t: "Maquiagem Social",
+    d: "Festas, formaturas e eventos especiais com acabamento impecável.",
+    img: p2,
+  },
+  {
+    n: "03",
+    t: "Penteados",
+    d: "Penteados sob medida que dialogam com sua make e seu estilo.",
+    img: p3,
+  },
+  {
+    n: "04",
+    t: "Cursos Profissionais",
+    d: "Formação completa para futuras maquiadoras profissionais.",
+    img: p4,
+  },
+  {
+    n: "05",
+    t: "Beauty Makeup",
+    d: "Make beauty para ensaios fotográficos e produções editoriais.",
+    img: p5,
+  },
 ];
 
 // -------- PORTFÓLIO --------
 // Para trocar imagens: substitua o caminho `image` por uma URL ou import.
 export const portfolioItems = [
-  { title: "Noivas",      category: "Noivas",      image: p1, tall: true },
-  { title: "Social",      category: "Social",      image: p2 },
-  { title: "Noiva Clássica", category: "Noivas",   image: p6 },
-  { title: "Penteado",    category: "Penteados",   image: p3 },
-  { title: "Bastidores",  category: "Bastidores",  image: p4, tall: true },
-  { title: "Beauty",      category: "Beauty",      image: p5 },
+  { title: "Noivas", category: "Noivas", image: p1, tall: true },
+  { title: "Social", category: "Social", image: p2, tall: true },
+  { title: "Penteado", category: "Penteados", image: p3, tall: true },
+  { title: "Cursos", category: "Cursos", image: p4, tall: true },
+  { title: "Beauty", category: "Beauty", image: p5, tall: true },
 ];
+
+export const visuals = {
+  experienceBackground: p4,
+  finalCtaBackground: p5,
+};
 
 // -------- EXPERIÊNCIA PREMIUM --------
 export const experience = [
-  { t: "Atendimento Exclusivo", d: "Agenda limitada para garantir presença total em cada cliente." },
-  { t: "Atendimento Personalizado", d: "Cada cliente recebe uma experiência exclusiva, pensada para valorizar sua beleza e seu momento especial." },
+  {
+    t: "Atendimento Exclusivo",
+    d: "Agenda limitada para garantir presença total em cada cliente.",
+  },
+  {
+    t: "Atendimento Personalizado",
+    d: "Cada cliente recebe uma experiência exclusiva, pensada para valorizar sua beleza e seu momento especial.",
+  },
   { t: "Produtos de Alta Linha", d: "Curadoria de marcas internacionais de prestígio." },
-  { t: "Experiência de 16 Anos", d: "Mais de uma década transformando autoestima, realizando sonhos e acompanhando momentos inesquecíveis." },
+  {
+    t: "Experiência de 16 Anos",
+    d: "Mais de uma década transformando autoestima, realizando sonhos e acompanhando momentos inesquecíveis.",
+  },
 ];
 
 // -------- DEPOIMENTOS --------
 export const testimonials = [
-  { n: "Marina A.", r: "Noiva, 2024", t: "A Liliane não fez só minha maquiagem. Ela me fez sentir a noiva mais bonita do mundo. Lágrimas de emoção ao me ver no espelho." },
-  { n: "Camila R.", r: "Aluna do curso", t: "O curso transformou minha carreira. Profundo, técnico e profundamente humano. Hoje atendo noivas graças a ela." },
-  { n: "Júlia P.",  r: "Noiva, 2023", t: "Cada detalhe pensado. Da pele que respirava à confiança que ela me passava. Uma artista no sentido mais sublime." },
+  {
+    n: "Marina A.",
+    r: "Noiva, 2024",
+    t: "A Liliane não fez só minha maquiagem. Ela me fez sentir a noiva mais bonita do mundo. Lágrimas de emoção ao me ver no espelho.",
+  },
+  {
+    n: "Camila R.",
+    r: "Aluna do curso",
+    t: "O curso transformou minha carreira. Profundo, técnico e profundamente humano. Hoje atendo noivas graças a ela.",
+  },
+  {
+    n: "Júlia P.",
+    r: "Noiva, 2023",
+    t: "Cada detalhe pensado. Da pele que respirava à confiança que ela me passava. Uma artista no sentido mais sublime.",
+  },
 ];
 
 // -------- NAVEGAÇÃO --------

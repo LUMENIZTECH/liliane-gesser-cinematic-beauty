@@ -16,6 +16,7 @@ import {
   testimonials,
   navLinks,
   cta,
+  visuals,
 } from "@/data/content";
 
 // Tudo o que é texto, imagem ou link vive em `src/data/content.ts`.
@@ -34,7 +35,8 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: `${brand.name} — ${brand.tagline}` },
       {
         property: "og:description",
-        content: "Maquiagem que eterniza momentos únicos. Especialista em noivas em Santa Catarina.",
+        content:
+          "Maquiagem que eterniza momentos únicos. Especialista em noivas em Santa Catarina.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
@@ -79,12 +81,22 @@ function Nav() {
       }`}
     >
       <div className="max-w-[1600px] mx-auto px-6 md:px-12 flex items-center justify-between">
-        <a href="#top" className="font-display text-xl tracking-[0.3em] text-foreground">
-          {brand.initials}
+        <a href="#top" className="inline-flex items-center">
+          {brand.logo ? (
+            <img src={brand.logo} alt={brand.name} className="h-10 w-auto" />
+          ) : (
+            <span className="font-display text-xl tracking-[0.3em] text-foreground">
+              {brand.initials}
+            </span>
+          )}
         </a>
         <nav className="hidden md:flex items-center gap-10 text-[11px] tracking-[0.3em] uppercase text-muted-foreground">
           {navLinks.map((l) => (
-            <a key={l.href} href={l.href} className="hover:text-foreground transition-colors duration-500">
+            <a
+              key={l.href}
+              href={l.href}
+              className="hover:text-foreground transition-colors duration-500"
+            >
               {l.label}
             </a>
           ))}
@@ -113,12 +125,22 @@ function Hero() {
   return (
     <section ref={ref} id="top" className="relative h-[100svh] w-full overflow-hidden bg-onyx">
       <motion.div style={{ scale }} className="absolute inset-0">
-        {/* IMAGEM TEMPORÁRIA — substitua por vídeo em /public/videos/hero.mp4 quando disponível */}
-        <img
-          src={media.heroPoster}
-          alt="Liliane Gesser"
+        {/* HERO VIDEO: usa `media.heroVideo` com `poster` como fallback */}
+        <video
           className="absolute inset-0 h-full w-full object-cover ken-burns"
-        />
+          src={media.heroVideo}
+          poster={media.heroPoster}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-hidden
+        >
+          <source src={media.heroVideo} type="video/mp4" />
+          {/* Fallback para navegadores que não suportam <video> */}
+          <img src={media.heroPoster} alt="Liliane Gesser" className="h-full w-full object-cover" />
+        </video>
         {/* Overlay cinematográfico */}
         <div className="absolute inset-0 bg-gradient-to-b from-onyx/50 via-onyx/30 to-onyx" />
         <div className="absolute inset-0 bg-gradient-to-r from-onyx/80 via-transparent to-onyx/50" />
@@ -207,9 +229,7 @@ function GoldButton({
 }) {
   const pad = size === "lg" ? "px-12 py-7" : "px-8 py-5";
   const text =
-    size === "lg"
-      ? "font-display text-2xl tracking-[0.3em]"
-      : "text-[11px] tracking-[0.4em]";
+    size === "lg" ? "font-display text-2xl tracking-[0.3em]" : "text-[11px] tracking-[0.4em]";
   return (
     <a
       href={href}
@@ -221,7 +241,9 @@ function GoldButton({
       } overflow-hidden transition-all duration-500`}
     >
       <span className="absolute inset-0 bg-gold translate-y-full group-hover:translate-y-0 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]" />
-      <span className={`relative ${text} uppercase group-hover:text-onyx transition-colors duration-500`}>
+      <span
+        className={`relative ${text} uppercase group-hover:text-onyx transition-colors duration-500`}
+      >
         {label}
       </span>
       <svg
@@ -300,7 +322,9 @@ function About() {
           <Reveal>
             <div className="flex items-center gap-3 mb-8">
               <span className="h-px w-10 bg-gold" />
-              <span className="text-[10px] tracking-[0.4em] uppercase text-gold">{about.eyebrow}</span>
+              <span className="text-[10px] tracking-[0.4em] uppercase text-gold">
+                {about.eyebrow}
+              </span>
             </div>
           </Reveal>
           <Reveal delay={0.1}>
@@ -353,14 +377,15 @@ function Services() {
                 <span className="text-[10px] tracking-[0.4em] uppercase text-gold">Serviços</span>
               </div>
               <h2 className="font-display text-5xl md:text-7xl leading-none">
-                O Atelier da<br />
+                O Atelier da
+                <br />
                 <span className="italic font-serif gradient-gold">Beleza</span>
               </h2>
             </div>
           </div>
         </Reveal>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           {services.map((s, i) => (
             <Reveal key={s.t} delay={i * 0.08}>
               <div
@@ -406,7 +431,8 @@ function Portfolio() {
                 <span className="text-[10px] tracking-[0.4em] uppercase text-gold">Portfólio</span>
               </div>
               <h2 className="font-display text-5xl md:text-7xl leading-none">
-                Obras em<br />
+                Obras em
+                <br />
                 <span className="italic font-serif gradient-gold">pele e luz.</span>
               </h2>
             </div>
@@ -416,7 +442,7 @@ function Portfolio() {
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 md:gap-6">
           {portfolioItems.map((it, i) => (
             <Reveal key={i} delay={i * 0.06}>
               <div
@@ -473,7 +499,12 @@ function Experience() {
   return (
     <section className="relative py-32 md:py-48 px-6 md:px-16 bg-onyx overflow-hidden">
       <div className="absolute inset-0 opacity-20">
-        <img src={services[3].img} alt="" className="w-full h-full object-cover" loading="lazy" />
+        <img
+          src={visuals.experienceBackground}
+          alt="Background"
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-onyx via-onyx/80 to-onyx" />
       </div>
       <div className="relative max-w-[1400px] mx-auto">
@@ -578,7 +609,7 @@ function FinalCTA() {
     <section className="relative py-40 md:py-56 px-6 md:px-16 overflow-hidden bg-onyx">
       <div className="absolute inset-0">
         <img
-          src={portfolioItems[2].image}
+          src={visuals.finalCtaBackground}
           alt=""
           loading="lazy"
           className="w-full h-full object-cover opacity-40 ken-burns"
