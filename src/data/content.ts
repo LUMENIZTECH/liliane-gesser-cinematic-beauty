@@ -5,11 +5,11 @@
 // ============================================================
 
 import heroImg from "@/assets/hero.jpg";
-import aboutImg from "@/assets/mae 2.jpeg";
+import aboutImg from "@/assets/mae-2.jpeg";
 import logoSymbol from "@/assets/logo-simbolo.png";
-import p1 from "@/assets/noiva .jpeg";
+import p1 from "@/assets/noiva.jpeg";
 import p2 from "@/assets/p2.jpg";
-import p3 from "@/assets/penteado 3.jpeg";
+import p3 from "@/assets/penteado-3.jpeg";
 import p4 from "@/assets/curso.jpeg";
 import p5 from "@/assets/p5.jpg";
 import p6 from "@/assets/p6.jpg";
