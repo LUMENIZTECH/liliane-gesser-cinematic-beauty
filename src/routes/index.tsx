@@ -113,17 +113,12 @@ function Hero() {
   return (
     <section ref={ref} id="top" className="relative h-[100svh] w-full overflow-hidden bg-onyx">
       <motion.div style={{ scale }} className="absolute inset-0">
-        {/* Substitua este vídeo pelo vídeo oficial da cliente em /public/videos/hero.mp4 */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster={media.heroPoster}
-          className="absolute inset-0 h-full w-full object-cover"
-        >
-          <source src={media.heroVideo} type="video/mp4" />
-        </video>
+        {/* IMAGEM TEMPORÁRIA — substitua por vídeo em /public/videos/hero.mp4 quando disponível */}
+        <img
+          src={media.heroPoster}
+          alt="Liliane Gesser"
+          className="absolute inset-0 h-full w-full object-cover ken-burns"
+        />
         {/* Overlay cinematográfico */}
         <div className="absolute inset-0 bg-gradient-to-b from-onyx/50 via-onyx/30 to-onyx" />
         <div className="absolute inset-0 bg-gradient-to-r from-onyx/80 via-transparent to-onyx/50" />
