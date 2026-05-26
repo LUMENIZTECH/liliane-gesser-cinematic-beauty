@@ -90,9 +90,9 @@ export const portfolioItems = [
 // -------- EXPERIÊNCIA PREMIUM --------
 export const experience = [
   { t: "Atendimento Exclusivo", d: "Agenda limitada para garantir presença total em cada cliente." },
-  { t: "Bastidores em Vídeo", d: "Cada produção é documentada com olhar cinematográfico." },
+  { t: "Atendimento Personalizado", d: "Cada cliente recebe uma experiência exclusiva, pensada para valorizar sua beleza e seu momento especial." },
   { t: "Produtos de Alta Linha", d: "Curadoria de marcas internacionais de prestígio." },
-  { t: "Equipe Própria", d: "Profissionais formadas pelos cursos da Liliane." },
+  { t: "Experiência de 16 Anos", d: "Mais de uma década transformando autoestima, realizando sonhos e acompanhando momentos inesquecíveis." },
 ];
 
 // -------- DEPOIMENTOS --------
