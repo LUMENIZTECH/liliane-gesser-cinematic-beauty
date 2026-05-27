@@ -12,8 +12,8 @@ import p2 from "@/assets/p2.jpg";
 import p3 from "@/assets/penteado-3.jpeg";
 import p4 from "@/assets/curso.jpeg";
 import p5 from "@/assets/p5.jpg";
-import p6 from "@/assets/isa1.jpeg";
-import p7 from "@/assets/isa2.jpeg";
+import p6 from "@/assets/isa1.JPEG";
+import p7 from "@/assets/isa2.JPEG";
 
 // -------- MARCA --------
 export const brand = {
