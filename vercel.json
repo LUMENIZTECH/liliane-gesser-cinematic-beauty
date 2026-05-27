@@ -1,9 +1,6 @@
 {
-  "functions": {
-    "dist/server/server.js": {
-      "runtime": "nodejs24.x"
-    }
-  },
+  "version": 2,
+  "buildCommand": "npm run build",
   "routes": [
     {
       "src": "/(.*)",
