@@ -38,7 +38,7 @@ export const contact = {
 // -------- MÍDIA --------
 // Substitua este vídeo pelo vídeo oficial da cliente em /public/videos/hero.mp4
 export const media = {
-  heroVideo: "/videos/video hero.mp4",
+  heroVideo: "/videos/hero.mp4",
   heroPoster: heroImg, // fallback enquanto o vídeo carrega
   aboutImage: aboutImg,
 };
