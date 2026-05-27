@@ -12,7 +12,8 @@ import p2 from "@/assets/p2.jpg";
 import p3 from "@/assets/penteado-3.jpeg";
 import p4 from "@/assets/curso.jpeg";
 import p5 from "@/assets/p5.jpg";
-import p6 from "@/assets/p6.jpg";
+import p6 from "@/assets/isa1.jpeg";
+import p7 from "@/assets/isa2.jpeg";
 
 // -------- MARCA --------
 export const brand = {
@@ -81,7 +82,7 @@ export const services = [
     n: "02",
     t: "Maquiagem Social",
     d: "Festas, formaturas e eventos especiais com acabamento impecável.",
-    img: p2,
+    img: p7,
   },
   {
     n: "03",
@@ -95,22 +96,15 @@ export const services = [
     d: "Formação completa para futuras maquiadoras profissionais.",
     img: p4,
   },
-  {
-    n: "05",
-    t: "Beauty Makeup",
-    d: "Make beauty para ensaios fotográficos e produções editoriais.",
-    img: p5,
-  },
 ];
 
 // -------- PORTFÓLIO --------
 // Para trocar imagens: substitua o caminho `image` por uma URL ou import.
 export const portfolioItems = [
   { title: "Noivas", category: "Noivas", image: p1, tall: true },
-  { title: "Social", category: "Social", image: p2, tall: true },
+  { title: "Social", category: "Social", image: p6, tall: true },
   { title: "Penteado", category: "Penteados", image: p3, tall: true },
   { title: "Cursos", category: "Cursos", image: p4, tall: true },
-  { title: "Beauty", category: "Beauty", image: p5, tall: true },
 ];
 
 export const visuals = {
@@ -138,19 +132,19 @@ export const experience = [
 // -------- DEPOIMENTOS --------
 export const testimonials = [
   {
-    n: "Marina A.",
-    r: "Noiva, 2024",
-    t: "A Liliane não fez só minha maquiagem. Ela me fez sentir a noiva mais bonita do mundo. Lágrimas de emoção ao me ver no espelho.",
+    n: "Julia B.",
+    r: "Noiva",
+    t: "Desde o primeiro atendimento até o resultado final, tudo foi impecável. Me senti linda, confortável e ainda mais especial nesse dia. Equipe maravilhosa, super profissional e querida!",
   },
   {
-    n: "Camila R.",
-    r: "Aluna do curso",
-    t: "O curso transformou minha carreira. Profundo, técnico e profundamente humano. Hoje atendo noivas graças a ela.",
+    n: "Julia A.",
+    r: "Social",
+    t: "Tive experiências incríveis com a Liliane! Além do trabalho impecável em maquiagem e cabelo, ela faz a gente se sentir linda, segura e especial. Tenho tanta confiança no trabalho dela que já escolhi para meus próximos eventos, incluindo minha formatura. Uma profissional maravilhosa e admirável!",
   },
   {
-    n: "Júlia P.",
-    r: "Noiva, 2023",
-    t: "Cada detalhe pensado. Da pele que respirava à confiança que ela me passava. Uma artista no sentido mais sublime.",
+    n: "Ana Paula T.",
+    r: "Noiva",
+    t: "Obrigada por todo o carinho, dedicação e cuidado em cada detalhe. Você e sua equipe tornaram esse dia ainda mais leve, tranquilo e especial. Uma experiência inesquecível!",
   },
 ];
 
